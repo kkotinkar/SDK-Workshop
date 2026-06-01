@@ -6,7 +6,6 @@ Agenda:
 * Adding a custom kconfig definitions to modify the application logic
 * Using a Zephyr system work queue
 <br>
-<br>
 
 ## Task 1: Creating the overlay file
 
@@ -15,11 +14,10 @@ For Nordic nRF54L15-DK:
 
 For the u-blox EVK-NORA-B2:
 `ubx_evknorab2_nrf54l15_cpuapp.overlay`
+<br>
 
 > [!IMPORTANT]
 > When creating an overlay in VS Code, the build tools will detect file changes and automatically prompt for a CMake invocation and pristine build. Click **Skip** first, complete all overlay modifications, and run the pristine build only afterwards.
-
-<br>
 
 ## Task 2: DTS led binding
 Choose either option A, B or C, or try them out one after another!
@@ -56,7 +54,7 @@ Hardware setup
     gpios = <&gpio2 7 GPIO_ACTIVE_HIGH>;
 };
 ```
-> [!NOTE]
+> [!TIP]
 > Done with Option A, no source code change required. Rebuild, flash & test.
 
 #### Option B -  Creating a new DTS node group
@@ -82,7 +80,7 @@ Modify `main.c` and obtain access to the new LED node:
 #define LED0_NODE DT_PATH(board_leds, my_led1)
 ```
 
-> [!NOTE]
+> [!TIP]
 > Done with Option B. Rebuild, flash & test.
 
 #### Option C - New DTS node group with alias usage
@@ -105,10 +103,8 @@ We'll use a custom LED node group, but add an alias to not require any source co
 };
 ```
 
-> [!NOTE]
+> [!TIP]
 > Done with Option C, no source code change required. Rebuild, flash & test.
-
-<br>
 
 ## Task 3: Adding Custom Kconfig Definitions
 
@@ -154,12 +150,8 @@ with:
 k_msleep(CONFIG_BLINKY_TIME_ON);
 ```
 
-<br>
-
 > [!TIP]
 > Done. Rebuild, flash & test.
-
-<br>
 
 ## Task 4: Using the Zephyr System Work Queue
 
@@ -209,8 +201,6 @@ Remove the `while(1)` loop in `main(void)` and replace it with:
 work_init();
 k_work_schedule(&blink_led_work, K_NO_WAIT);
 ```
-
-<br>
 
 > [!TIP]
 > Done. Rebuild, flash & test.

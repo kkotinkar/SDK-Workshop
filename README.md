@@ -39,5 +39,3 @@ This repository contains code snippets useful for the hands on sessions.
 3) Addon: Sensor integration
      - [Adding a simulated sensor](sessions/3_addon_sim_sensor.md)
 
-
-## Workshop Slides
