@@ -1,5 +1,8 @@
 # Working with the Zephyr blinky sample
 
+> [!IMPORTANT]
+> The SDK contains a Nordic blinky sample (nrf/samples/zephyr/basic/blinky) and a Zephyr blinky sample (zephyr/samples/basic/blinky). Ensure to use the Zephyr variant as the Nordic variant does not contain the actual source code file (src/main.c) in the project.
+
 Agenda:
 * Getting familiar with overlay files
 * Changing the LED Pin through DTS modifications

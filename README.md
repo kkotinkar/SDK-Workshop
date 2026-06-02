@@ -8,18 +8,24 @@ Learning Zephyr RTOS, the Nordic nRF Connect SDK and Bluetooth LE on Nordic & u-
 
 ## Preparations
 
-* Installed IDE (VS Code) with Nordic Extension Pack
+Link: [IDE & SDK Step-by-step Installation Guide](https://academy.nordicsemi.com/courses/nrf-connect-sdk-fundamentals/lessons/lesson-1-nrf-connect-sdk-introduction/topic/exercise-1-1/)
+
+* Installed IDE (VS Code) with Nordic Extension Pack & SEGGER J-Link
 * Installed nRF Connect SDK + toolchain in stated version
 * Download the devicetree files for the EVK-NORA B2: [Download EVK-NORA-B2 files](ubx_evknorab2_zephyr_main.zip)
 * Setup the EVK-NORA-B2 out-of-tree (not part of NCS v3.3.0) devicetree files within VS Code (see next step)
 
+
+
 #### Setup VS Code and the nRF Connect Extension for custom board directories:
 1. Copy custom/third-party device tree files into a directory of your choice
-2. The directory should contain the boards folder followed by /vendor/board_name/
+2. The directory should contain the `boards` folder followed by /vendor/board_name/
 3. Add the custom boards directory to VS Code 
     * Open VS code settings via the top command bar, enter: `> Preferences Open User Settings`
     * Search for "board roots" & find `Nrf-connect: Board Roots` as setting
     * `Add item`, use the absolute path to your custom board directory
+    * Example: `C:\Nordic\Projects\custom_boards\`
+    * See slide deck for GUI images/references
 
 ## Code snippets for hands-on sessions
 This repository contains code snippets useful for the hands on sessions. 
@@ -39,3 +45,7 @@ This repository contains code snippets useful for the hands on sessions.
 3) Addon: Sensor integration
      - [Adding a simulated sensor](sessions/3_addon_sim_sensor.md)
 
+## Workshop Slides
+- [Nordic Introduction](slides/00_Nordic_Introduction.pdf)
+- [Hands-on session 1: Blinky Sample](slides/01_Hands-on_Blinky.pdf)
+- [Hands-on session 2: Bluetooth LE](slides/02_Hands-on_Bluetooth_LE.pdf)

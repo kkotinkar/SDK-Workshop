@@ -46,6 +46,9 @@
    
 ## Task 2: Working with the peripheral_lbs sample
 
+> [!IMPORTANT]
+> We are switching to a new project, create a new application, copy a sample: `Nordic peripheral_lbs`.
+
 Start with a new project, using the Nordic Peripheral LBS sample, found under <code>sdk/nrf/samples/bluetooth/peripheral_lbs</code>
 
 1. In `main.c`: Change the scan response packet, and include a URL to a website using a Uniform Resource Identifier
