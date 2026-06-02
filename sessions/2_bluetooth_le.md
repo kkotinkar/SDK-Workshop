@@ -70,3 +70,6 @@ Start with a new project, using the Nordic Peripheral LBS sample, found under <c
                 sizeof(url_data))
     };
     ```
+
+> [!IMPORTANT]
+> The scan response URI data field is not visible on iOS. You can only view the link using an Android phone.
